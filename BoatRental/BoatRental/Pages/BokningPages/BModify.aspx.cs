@@ -25,6 +25,7 @@ namespace BoatRental.Pages.Master
 
         private string Status
         {
+            //Används för att spara ett fel/rätt meddelande
             get { return Session["Status"] as string; }
             set { Session["Status"] = value; }
         }
@@ -61,9 +62,17 @@ namespace BoatRental.Pages.Master
             if (TryUpdateModel(bokning))
             {
                 //Om bokningen går igenom valideringen, spara bokningen.
-                Service.SaveBokning(bokning, ID);
-                Status = "Bokningen har ändrats!";
-                Response.RedirectToRoute("Bokningar", null);
+                try
+                {
+                    Service.SaveBokning(bokning, ID);
+                    Status = "Bokningen har ändrats!";
+                    Response.RedirectToRoute("Bokningar", null);
+                }
+                catch
+                {
+                    ModelState.AddModelError(String.Empty, "Fel när bokningen skulle updateras. Klicka på Bokningar och se till att det inte är en dubbelbokning!");
+                }
+                
             }
         }
     }

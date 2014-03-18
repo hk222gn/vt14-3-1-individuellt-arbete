@@ -6,6 +6,7 @@
     <h2>Ändra kund</h2>
 
     <asp:ValidationSummary runat="server"></asp:ValidationSummary>
+    <div id="input-form">
     <asp:FormView ID="KundFormView" runat="server"
         ItemType="BoatRental.Model.Kund"
         DefaultMode="Edit"
@@ -39,4 +40,5 @@
             <%-- Slut validering --%>
         </EditItemTemplate>
     </asp:FormView>
+    </div>
 </asp:Content>

@@ -25,6 +25,7 @@ namespace BoatRental.Pages.Master
 
         private string Status
         {
+            //Används för att spara ett fel/rätt meddelande
             get { return Session["Status"] as string; }
             set { Session["Status"] = value; }
         }
@@ -46,7 +47,7 @@ namespace BoatRental.Pages.Master
                 }
                 catch
                 {
-                    ModelState.AddModelError(String.Empty, "Något gick fel när bokningen skulle läggas till");
+                    ModelState.AddModelError(String.Empty, "Fel när bokningen skulle updateras. Klicka på Bokningar och se till att det inte är en dubbelbokning!");
                 }
 
             }

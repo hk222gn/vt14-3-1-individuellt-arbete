@@ -19,6 +19,7 @@ namespace BoatRental.Pages.Shared
 
         private string Status
         {
+            //Används för att spara ett fel/rätt meddelande
             get { return Session["Status"] as string; }
             set { Session["Status"] = value; }
         }

@@ -17,8 +17,9 @@ namespace BoatRental.Pages.Shared
             get { return _service ?? (_service = new Service()); }
         }
 
-         private string Status
+        private string Status
         {
+            //Används för att spara ett fel/rätt meddelande
             get { return Session["Status"] as string; }
             set { Session["Status"] = value; }
         }
