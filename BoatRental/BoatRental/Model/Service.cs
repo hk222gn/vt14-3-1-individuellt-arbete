@@ -17,7 +17,7 @@ namespace BoatRental.Model
 
         #region Properties
 
-        //The 3 objekts are only created once needed.
+        //Alla tre initieras bara när det behövs
         private KundDAL KundDAL
         {
             get { return _kundDAL ?? (_kundDAL = new KundDAL()); }
@@ -104,7 +104,7 @@ namespace BoatRental.Model
                 throw ex;
 
             }
-            //Om KundID = 0, skapa en ny kund, annars updatera en befintlig.
+            //Om BokningID = 0, skapa en ny kund, annars updatera en befintlig.
             if (bokning.BokningID == 0)
             {
                 BokningDAL.InsertBokning(bokning, ID);

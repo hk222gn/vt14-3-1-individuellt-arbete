@@ -15,8 +15,8 @@
         <EditItemTemplate>
             <%-- Datat som ska ändras, Bind("DATE", EXPRESSION) ändrar hela datetime till endast datumet. --%>
             <div>Båtplatsnummer <asp:TextBox ID="BåtplTextBox" runat="server" Text='<%# BindItem.BåtplID %>'></asp:TextBox></div>
-            <div>Startdatum <asp:TextBox ID="StartTextBox" runat="server" Text='<%# Bind("StartDatum", "{0:MM/dd/yyyy}") %>'></asp:TextBox></div>
-            <div>Slutdatum <asp:TextBox ID="SlutTextBox" runat="server" Text='<%# Bind("SlutDatum", "{0:MM/dd/yyyy}") %>'></asp:TextBox></div>
+            <div>Startdatum <asp:TextBox ID="StartTextBox" runat="server" Text='<%# Bind("StartDatum", "{0:yyyy/dd/MM}") %>'></asp:TextBox></div>
+            <div>Slutdatum <asp:TextBox ID="SlutTextBox" runat="server" Text='<%# Bind("SlutDatum", "{0:yyyy/dd/MM}") %>'></asp:TextBox></div>
             
             <div>
                 <asp:LinkButton ID="LinkButton1" runat="server" CommandName="Update" Text="Ändra"></asp:LinkButton>

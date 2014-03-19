@@ -70,7 +70,7 @@ namespace BoatRental.Pages.Master
                 }
                 catch
                 {
-                    ModelState.AddModelError(String.Empty, "Fel när bokningen skulle updateras. Klicka på Bokningar och se till att det inte är en dubbelbokning!");
+                    ModelState.AddModelError(String.Empty, "Fel när bokningen skulle updateras. Klicka på Bokningar och se till att det inte är en dubbelbokning och att båtplatsen finns!");
                 }
                 
             }
