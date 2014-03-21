@@ -61,7 +61,7 @@
     <Content Include="Global.asax" />
     <Content Include="Pages\KundPages\KList.aspx" />
     <Content Include="Pages\BokningPages\BList.aspx" />
-    <Content Include="Pages\BåtplatsPages\BåList.aspx" />
+    <Content Include="Pages\BatplatsPages\BaList.aspx" />
     <Content Include="Pages\KundPages\KDelete.aspx" />
     <Content Include="Pages\KundPages\KModify.aspx" />
     <Content Include="Pages\KundPages\KNew.aspx" />
@@ -79,9 +79,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Bokning.cs" />
-    <Compile Include="Model\Båtplats.cs" />
+    <Compile Include="Model\Batplats.cs" />
     <Compile Include="Model\DAL\BokningDAL.cs" />
-    <Compile Include="Model\DAL\BåtplatsDAL.cs" />
+    <Compile Include="Model\DAL\BatplatsDAL.cs" />
     <Compile Include="Model\DAL\DALBase.cs" />
     <Compile Include="Model\DAL\KundDAL.cs" />
     <Compile Include="Model\Kund.cs" />
@@ -114,12 +114,12 @@
     <Compile Include="Pages\BokningPages\BList.aspx.designer.cs">
       <DependentUpon>BList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BåtplatsPages\BåList.aspx.cs">
-      <DependentUpon>BåList.aspx</DependentUpon>
+    <Compile Include="Pages\BatplatsPages\BaList.aspx.cs">
+      <DependentUpon>BaList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\BåtplatsPages\BåList.aspx.designer.cs">
-      <DependentUpon>BåList.aspx</DependentUpon>
+    <Compile Include="Pages\BatplatsPages\BaList.aspx.designer.cs">
+      <DependentUpon>BaList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\KundPages\KDelete.aspx.cs">
       <DependentUpon>KDelete.aspx</DependentUpon>

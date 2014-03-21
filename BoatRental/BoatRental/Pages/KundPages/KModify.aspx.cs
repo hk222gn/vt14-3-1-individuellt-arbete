@@ -51,6 +51,7 @@ namespace BoatRental.Pages.Shared
                 Service.SaveKund(kund);
                 Status = "Kunden updaterades!";
                 Response.RedirectToRoute("Kunder", null);
+                Context.ApplicationInstance.CompleteRequest();
             }
         }
         public BoatRental.Model.Kund KundFormView_GetItem()

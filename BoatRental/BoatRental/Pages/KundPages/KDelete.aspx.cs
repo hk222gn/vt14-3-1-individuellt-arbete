@@ -60,6 +60,7 @@ namespace BoatRental.Pages.Shared
                 Service.DeleteKund(ID);
                 Status = "Kunden raderades!";
                 Response.RedirectToRoute("Kunder", null);
+                Context.ApplicationInstance.CompleteRequest();
             }
             catch 
             {

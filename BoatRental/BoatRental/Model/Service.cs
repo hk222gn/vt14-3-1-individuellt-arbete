@@ -11,7 +11,7 @@ namespace BoatRental.Model
     {
         #region Fields
         private KundDAL _kundDAL;
-        private BåtplatsDAL _båtplatsDAL;
+        private BatplatsDAL _båtplatsDAL;
         private BokningDAL _bokningDAL;
         #endregion
 
@@ -23,9 +23,9 @@ namespace BoatRental.Model
             get { return _kundDAL ?? (_kundDAL = new KundDAL()); }
         }
 
-        private BåtplatsDAL BåtplatsDAL
+        private BatplatsDAL BatplatsDAL
         {
-            get { return _båtplatsDAL ?? (_båtplatsDAL = new BåtplatsDAL()); }
+            get { return _båtplatsDAL ?? (_båtplatsDAL = new BatplatsDAL()); }
         }
 
         private BokningDAL BokningDAL
@@ -119,16 +119,24 @@ namespace BoatRental.Model
         {
             return BokningDAL.GetBokningPageWise(maximumRows, startRowIndex, out totalRowCount);
         }
-
         #endregion
 
         #region båtplats read methods.
 
-        public IEnumerable<Båtplats> GetBåtplatsPageWise(int maximumRows, int startRowIndex, out int totalRowCount)
+        public IEnumerable<Batplats> GetBåtplatsPageWise(int maximumRows, int startRowIndex, out int totalRowCount)
         {
-            return BåtplatsDAL.GetBåtplatsPageWise(maximumRows, startRowIndex, out totalRowCount);
+            return BatplatsDAL.GetBåtplatsPageWise(maximumRows, startRowIndex, out totalRowCount);
         }
 
+        public IEnumerable<Batplats> GetBatplatser()
+        {
+            return BatplatsDAL.GetBatplatser();
+        }
+
+        public Batplats GetBatplats(int batplID)
+        {
+            return BatplatsDAL.GetBatplats(batplID);
+        }
         #endregion
     }
 }

@@ -73,12 +73,12 @@ namespace BoatRental.Model.DAL
 
                             };
                         }
-                        throw new ApplicationException("Det gick inte att hitta någon kund!");
+                        throw new ApplicationException("Det gick inte att hitta någon bokning!");
                     }
                 }
                 catch
                 {
-                    throw new ApplicationException("Error in KundDAL GetKund");
+                    throw new ApplicationException("Error in BokningDAL GetBokning");
                 }
 
             }

@@ -44,6 +44,7 @@ namespace BoatRental.Pages.Master
                     Service.SaveBokning(bokning, ID);
                     Status = "Bokningen skapades!";
                     Response.RedirectToRoute("Bokningar", null);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 catch
                 {
@@ -51,6 +52,11 @@ namespace BoatRental.Pages.Master
                 }
 
             }
+        }
+
+        public IEnumerable<Batplats> DropDown_GetBatplatser()
+        {
+            return Service.GetBatplatser();
         }
     }
 }

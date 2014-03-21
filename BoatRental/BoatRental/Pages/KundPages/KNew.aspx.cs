@@ -38,6 +38,7 @@ namespace BoatRental.Pages.Master
                     Service.SaveKund(kund);
                     Session["Status"] = "Kunden lades till!";
                     Response.RedirectToRoute("Kunder", null);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 catch
                 {

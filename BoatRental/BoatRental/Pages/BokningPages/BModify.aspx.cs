@@ -67,13 +67,19 @@ namespace BoatRental.Pages.Master
                     Service.SaveBokning(bokning, ID);
                     Status = "Bokningen har ändrats!";
                     Response.RedirectToRoute("Bokningar", null);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 catch
                 {
-                    ModelState.AddModelError(String.Empty, "Fel när bokningen skulle updateras. Klicka på Bokningar och se till att det inte är en dubbelbokning och att båtplatsen finns!");
+                    ModelState.AddModelError(String.Empty, "Fel när bokningen skulle updateras. Klicka på Bokningar och se till att det inte är en dubbelbokning!");
                 }
                 
             }
+        }
+
+        public IEnumerable<Batplats> DropDown_GetBatplatser()
+        {
+            return Service.GetBatplatser();
         }
     }
 }

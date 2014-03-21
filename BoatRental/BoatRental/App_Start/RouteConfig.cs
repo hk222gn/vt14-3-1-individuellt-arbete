@@ -22,7 +22,7 @@ namespace BoatRental
             rout.MapPageRoute("BokningarRadera", "Bokningar/{ID}/Radera", "~/Pages/BokningPages/BDelete.aspx");
             rout.MapPageRoute("BokningarÄndra", "Bokningar/{ID}/Ändra", "~/Pages/BokningPages/BModify.aspx");
 
-            rout.MapPageRoute("Båtplatser", "Båtplatser", "~/Pages/BåtplatsPages/BåList.aspx");
+            rout.MapPageRoute("Båtplatser", "Båtplatser", "~/Pages/BatplatsPages/BaList.aspx");
         }
 
     }

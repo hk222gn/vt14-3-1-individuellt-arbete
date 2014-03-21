@@ -59,6 +59,7 @@ namespace BoatRental.Pages.Master
                 Service.DeleteBokning(ID);
                 Status = "Bokningen har raderats!";
                 Response.RedirectToRoute("Bokningar", null);
+                Context.ApplicationInstance.CompleteRequest();
             }
             catch
             {

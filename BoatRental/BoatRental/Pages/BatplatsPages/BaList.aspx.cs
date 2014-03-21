@@ -22,7 +22,7 @@ namespace BoatRental.Pages.Shared
 
         }
 
-        public IEnumerable<Båtplats> BåtplListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
+        public IEnumerable<Batplats> BåtplListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)
         {
             return Service.GetBåtplatsPageWise(maximumRows, startRowIndex, out totalRowCount);
         }

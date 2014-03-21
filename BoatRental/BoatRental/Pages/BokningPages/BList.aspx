@@ -23,7 +23,7 @@
                  <table>
                         <tr>
                             <th>
-                                Kundnummer
+                                Kund namn 
                             </th>
                             <th>
                                 Båtplatsnummer
@@ -56,10 +56,10 @@
                 <%-- De data som ska visas --%>
                 <tr>
                     <td>
-                        <%#: Item.KundID %>
+                        <asp:Label ID="NameLabel" runat="server" Text='<%# GetKundNamn(Item.KundID) %>'></asp:Label>
                     </td>
                     <td>
-                        <%# Item.BåtplID %>
+                        <asp:Label ID="BatplatsLabel" runat="server" Text='<%# GetBatplatsnr(Item.BåtplID) %>'></asp:Label>
                     </td>
                     <td>
                         <%-- Visar endast datum --%>

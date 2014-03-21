@@ -38,5 +38,18 @@ namespace BoatRental.Pages.Shared
         {
             return Service.GetBokningPageWise(maximumRows, startRowIndex, out totalRowCount);
         }
+
+        public string GetKundNamn(int kundID)
+        {
+            var kund = Service.GetKund(kundID);
+            return kund.Namn;
+        }
+
+        public string GetBatplatsnr(int batplID)
+        {
+            var batplats = Service.GetBatplats(batplID);
+
+            return batplats.Båtplatsnr;
+        }
     }
 }

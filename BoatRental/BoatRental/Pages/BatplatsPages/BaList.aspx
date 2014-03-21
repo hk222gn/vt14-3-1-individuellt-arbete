@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="BåList.aspx.cs" Inherits="BoatRental.Pages.Shared.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeBehind="BaList.aspx.cs" Inherits="BoatRental.Pages.Shared.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -8,7 +8,7 @@
 
     <div id="input-form-BåList">
     <asp:ListView ID="BåtplListView" runat="server"
-        ItemType="BoatRental.Model.Båtplats"
+        ItemType="BoatRental.Model.Batplats"
         SelectMethod="BåtplListView_GetData"
         DataKeyNames="BåtplID">
         <LayoutTemplate>
@@ -43,7 +43,7 @@
             <%-- De data som ska visas --%>
             <tr>
                 <td>
-                    <%# Item.BåtplID %>
+                    <%# Item.Båtplatsnr %>
                 </td>
                 <td>
                     <%# Item.DjupID %>
