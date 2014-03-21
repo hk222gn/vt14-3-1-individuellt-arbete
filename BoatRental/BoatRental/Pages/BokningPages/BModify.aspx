@@ -35,7 +35,7 @@
                  Operator="DataTypeCheck" Type="Date" Display="None"></asp:CompareValidator>
 
             <asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="Slutdatumet kan inte gå ut före startdatumet!" 
-                    ControlToValidate="SlutTextBox" ControlToCompare="StartTextBox" Type="Date" Operator="GreaterThanEqual" Display="None"></asp:CompareValidator>
+                    ControlToValidate="SlutTextBox" ControlToCompare="StartTextBox" Type="Date" Operator="GreaterThan" Display="None"></asp:CompareValidator>
             <%-- Slut validering --%>
         </EditItemTemplate>
     </asp:FormView>
